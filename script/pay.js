@@ -76,6 +76,5 @@ function proceedToPayment() {
     };
     localStorage.setItem('bookingInfo', JSON.stringify(userData));
 
-    // Redirect to a confirmation page (optional)
-    // window.location.href = "confirmation.html";
+
 }
