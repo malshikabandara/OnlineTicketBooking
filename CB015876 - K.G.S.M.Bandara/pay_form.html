@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <link rel="stylesheet" href="style/pay.css"> 
+    <script src="script/pay.js" defer></script> 
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th>Movie Name</th>
+                <th>Number of Seats</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="cart-body">
+        
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Total Price:</strong></td>
+                <td id="total-price">$0.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Personal Details Form -->
+    <h2>Personal Details</h2>
+    <form id="personal-details-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+    </form>
+
+    <!-- Seat Preferences Form -->
+<h2>Seat Preferences</h2>
+<form id="seat-preferences-form">
+    <label for="seatType">Seat Type:</label>
+    <select id="seatType" name="seatType" required>
+        <option value=""> Select Seat Type --</option>
+        <option value="regular">Regular</option>
+        <option value="premium">Premium</option>
+        <option value="recliner">Recliner</option>
+    </select><br>
+
+    <label for="seatLocation">Preferred Location:</label>
+    <select id="seatLocation" name="seatLocation" required>
+        <option value=""> Select Seat Location --</option>
+        <option value="front">Front Rows</option>
+        <option value="middle">Middle Rows</option>
+        <option value="back">Back Rows</option>
+        <option value="aisle">Aisle Seat</option>
+    </select><br>
+
+    <label for="seatCount">Number of Seats:</label>
+    <input type="number" id="seatCount" name="seatCount" min="1" max="10" required><br>
+</form>
+
+
+    <!-- Payment Details Form -->
+    <h2>Payment Details</h2>
+    <form id="payment-details-form">
+        <label for="card-name">Name on Card:</label>
+        <input type="text" id="card-name" name="card-name" required><br>
+
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" name="card-number" required><br>
+
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="month" id="expiry-date" name="expiry-date" required><br>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required><br>
+    </form>
+
+    <button onclick="proceedToPayment()">Proceed to Payment</button>
+
+</body>
+</html>
